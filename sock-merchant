@@ -1,0 +1,16 @@
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. INTEGER_ARRAY ar
+#
+
+def sockMerchant(n, ar):
+    # Write your code here
+    pair_count=0
+    counted=[]
+    for i in ar:
+        if i not in counted:
+            add=ar.count(i)
+            pair_count+=(add//2)
+            counted.append(i)
+    return pair_count
