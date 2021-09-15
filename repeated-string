@@ -1,0 +1,21 @@
+# The function is expected to return a LONG_INTEGER.
+# The function accepts following parameters:
+#  1. STRING s
+#  2. LONG_INTEGER n
+#
+
+def repeatedString(s, n):
+    # Write your code here
+    count=0
+    for i in s:
+        if i=='a':
+            count+=1
+    count_b=0
+    remaining_length= n%len(s)
+    remaining_string=s[:remaining_length]
+    for j in remaining_string:
+        if j=='a':
+            count_b+=1
+    if remaining_length==0:
+        count_b=0
+    return count*(n//len(s))+count_b
